@@ -1,13 +1,15 @@
 from gtn import GTN
 from rps import RPS
 from tictactoe import TicTacToe
-from pig import PlayerCount,roll,Pig
+from pig import PlayerCount
+from math_prob import play
 while True:
-    txt = """Mini Games!!!
+    txt = """\nMini Games!!!
     - Guess The Number (1)
     - Rock, Paper, Scissors (2)
     - Tic Tac Toe (3)
     - Pig Game (4)
+    - Math Problem Solver (5)
 Select a game (press a number or 'q' to quit): """
     value = input(txt)
     if value == "1":
@@ -19,5 +21,7 @@ Select a game (press a number or 'q' to quit): """
         game.play()
     elif value == "4":
         PlayerCount()
+    elif value == "5":
+        play()
     else:
         break
